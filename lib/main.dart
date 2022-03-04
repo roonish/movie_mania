@@ -6,6 +6,7 @@ import 'package:mymovies/repository/repository.dart';
 import 'package:mymovies/screen/builderpage.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(const MyApp());
 }
 

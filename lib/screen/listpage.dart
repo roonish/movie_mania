@@ -24,10 +24,10 @@ class ListPage extends StatelessWidget {
         child: GridView.builder(
             shrinkWrap: true,
             gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                childAspectRatio: 20 / 30,
-                crossAxisCount: 5,
-                crossAxisSpacing: 5,
-                mainAxisSpacing: 20),
+              childAspectRatio: 20 / 50,
+              crossAxisCount: 2,
+              crossAxisSpacing: 20,
+            ),
             itemCount: movieslist.length,
             itemBuilder: (context, index) {
               return GestureDetector(
@@ -64,7 +64,7 @@ class ListPage extends StatelessWidget {
                         child: Center(
                           child: Container(
                             padding: const EdgeInsets.only(
-                                left: 12, right: 12, top: 4, bottom: 4),
+                                left: 15, right: 15, top: 8, bottom: 8),
                             color: const Color.fromARGB(255, 231, 219, 44),
                             child: Text(
                               movieslist[index].type.toUpperCase(),

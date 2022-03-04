@@ -39,6 +39,10 @@ dependencies:
   http:
   flutter_bloc:
   bloc:
+  sqflite:
+  path_provider:
+  
+  
 
 dev_dependencies:
   flutter_test:
