@@ -75,6 +75,7 @@ class HomePage extends StatelessWidget {
                   if (blocs.wordSearched.text.isNotEmpty) {
                     await DatabaseHelper.instance
                         .add(SqlModel(name: blocs.wordSearched.text));
+                    //  blocs.add(MoviesEvent.showHistory);
                   }
 
                   blocs.add(MoviesEvent.buttonTap);

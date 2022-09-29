@@ -19,7 +19,7 @@ class _HistoryState extends State<History> {
       child: SingleChildScrollView(
         child: SizedBox(
           height: MediaQuery.of(context).size.height * 0.3,
-          //  color: Colors.white,
+          //    color: Colors.white,
           child: FutureBuilder<List<SqlModel>>(
               future: DatabaseHelper.instance.read(),
               builder: (context, snapshot) {

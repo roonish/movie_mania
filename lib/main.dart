@@ -16,8 +16,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-        create: (context) =>
-            MoviesBloc(MovieRepository(), DetailRepository(), ""),
+        create: (context) => MoviesBloc(
+              MovieRepository(),
+              DetailRepository(),
+              "",
+            ),
         child: MaterialApp(
             debugShowCheckedModeBanner: false,
             theme: ThemeData.dark(),

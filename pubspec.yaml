@@ -37,8 +37,8 @@ dependencies:
   built_value:
   built_collection:
   http:
-  flutter_bloc:
-  bloc:
+  flutter_bloc: 
+  bloc: ^8.0.3
   sqflite:
   path_provider:
   

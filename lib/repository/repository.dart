@@ -16,9 +16,9 @@ class MovieRepository {
         //   print(response.body);
         // print(movieSerialized);
 //  disserialized wala.  MoviesDatas ko list
-        final a = movieSerialized!.search.map((value) => value).toList();
+        //  return movieSerialized!.search.map((value) => value).toList();
 
-        return a;
+        return movieSerialized!.search.toList();
       } else {
         throw Exception("status code is not 200");
       }

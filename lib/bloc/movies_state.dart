@@ -24,3 +24,9 @@ class MoviesDetailReceived extends MoviesState {
 
   MoviesDetailReceived(this.movieDetail);
 }
+
+// class MovieHistory extends MoviesState {
+//   final List<SqlModel> sqlModel;
+
+//   MovieHistory(this.sqlModel);
+// }

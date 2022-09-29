@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:mymovies/bloc/movies_bloc.dart';
 import 'package:mymovies/screen/detailpage.dart';
 import 'package:mymovies/screen/errorpage.dart';
+import 'package:mymovies/screen/history.dart';
 import 'package:mymovies/screen/homepage.dart';
 import 'package:mymovies/screen/listpage.dart';
 import 'package:mymovies/screen/loadingWidget.dart';
@@ -46,6 +47,9 @@ class BuilderPage extends StatelessWidget {
           if (state is MoviesLoading) {
             return const Loadingpage();
           }
+          // if (state is MovieHistory) {
+          //   return const History();
+          // }
           return const HomePage();
         },
       ),

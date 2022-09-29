@@ -13,9 +13,13 @@ class MoviesBloc extends Bloc<MoviesEvent, MoviesState> {
   final wordSearched = TextEditingController();
   String query;
   final DetailRepository detailRepository;
+  //final DatabaseHelper databaseHelper;
 
-  MoviesBloc(this.movieRepository, this.detailRepository, this.query)
-      : super(MoviesInitial()) {
+  MoviesBloc(
+    this.movieRepository,
+    this.detailRepository,
+    this.query,
+  ) : super(MoviesInitial()) {
     on<MoviesEvent>((event, emit) async {
       if (event == MoviesEvent.buttonTap) {
         emit(MoviesLoading());
@@ -59,6 +63,16 @@ class MoviesBloc extends Bloc<MoviesEvent, MoviesState> {
           });
         }
       }
+
+      // if (event == MoviesEvent.showHistory) {
+      //   // emit(MoviesLoading());
+      //   try {
+      //     final movieSearch = await DatabaseHelper.instance.read();
+      //     emit(MovieHistory(movieSearch));
+      //   } on Exception catch (e) {
+      //     emit(MoviesInitial());
+      //   }
+      // }
     });
   }
 }
